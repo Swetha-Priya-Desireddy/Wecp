@@ -1,40 +1,33 @@
 package com.wecp.progressive.dao;
-
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
-
 import com.wecp.progressive.entity.Cricketer;
-
 public class CricketerDAOImpl implements CricketerDAO {
 
-    @Override
-    public int addCricketer(Cricketer cricketer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addCricketer'");
-    }
+  @Override
+  public int addCricketer(Cricketer cricketer) throws SQLException {
+    return -1;
+  }
 
-    @Override
-    public Cricketer getCricketerById(int cricketerId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getCricketerById'");
-    }
+  @Override
+  public Cricketer getCricketerById(int cricketerId) throws SQLException {
+    return null;
+  }
 
-    @Override
-    public void updateCricketer(Cricketer cricketer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateCricketer'");
-    }
+  @Override
+  public void updateCricketer(Cricketer cricketer) throws SQLException {
+   
+  }
 
-    @Override
-    public void deleteCricketer(int cricketerId) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteCricketer'");
-    }
+  @Override
+  public void deleteCricketer(int cricketerId) throws SQLException {
+    
+  }
 
-    @Override
-    public List<Cricketer> getAllCricketers() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllCricketers'");
-    }
-
-
+  @Override
+  public List<Cricketer> getAllCricketers() throws SQLException {
+    return new ArrayList<>();
+  }
+   
 }

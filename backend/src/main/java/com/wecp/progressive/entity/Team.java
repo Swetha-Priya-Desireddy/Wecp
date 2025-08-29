@@ -1,6 +1,6 @@
 package com.wecp.progressive.entity;
 
-public class Team {
+public class Team implements Comparable<Team> {
     private int teamId;
     private String teamName;
     private String location;
@@ -44,6 +44,10 @@ public class Team {
     }
     public void setEstablishmentYear(int establishmentYear) {
         this.establishmentYear = establishmentYear;
+    }
+    @Override
+    public int compareTo(Team o) {
+        return this.getTeamName().compareTo(o.getTeamName());
     }
     
 

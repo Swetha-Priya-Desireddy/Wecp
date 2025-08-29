@@ -1,6 +1,8 @@
 package com.wecp.progressive.entity;
 
-public class Cricketer {
+import java.util.Comparator;
+
+public class Cricketer implements Comparable<Cricketer> {
     private int cricketerId;
     private int teamId;
     private String cricketerName;
@@ -78,5 +80,18 @@ public class Cricketer {
     public void setTotalWickets(int totalWickets) {
         this.totalWickets = totalWickets;
     }
+    @Override
+    public int compareTo(Cricketer other)
+    {
+        return Comparator.comparingInt(Cricketer::getExperience).compare(this, other);
+    }
+    @Override
+    public String toString() {
+        return "Cricketer [cricketerId=" + cricketerId + ", teamId=" + teamId + ", cricketerName=" + cricketerName
+                + ", age=" + age + ", nationality=" + nationality + ", experience=" + experience + ", role=" + role
+                + ", totalRuns=" + totalRuns + ", totalWickets=" + totalWickets + "]";
+    }
+    
+
     
 }
