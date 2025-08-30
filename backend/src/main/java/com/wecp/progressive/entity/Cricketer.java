@@ -1,5 +1,5 @@
 package com.wecp.progressive.entity;
 
-public class Cricketer {
+public class Cricketer implements Comp {
 
 }
