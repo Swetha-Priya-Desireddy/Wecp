@@ -1,4 +1,10 @@
 package com.wecp.progressive.repository;
 
-public interface TeamRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.wecp.progressive.entity.Team;
+
+public interface TeamRepository extends JpaRepository<Team,Integer>{
+    Team findByTeamId(int teamId);
+    
 }
