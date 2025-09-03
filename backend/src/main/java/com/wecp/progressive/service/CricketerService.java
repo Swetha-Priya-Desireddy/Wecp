@@ -6,7 +6,7 @@ public interface CricketerService {
 
     List<Cricketer> getAllCricketers()throws SQLException;
 
-    int addCricketer(Cricketer cricketer)throws SQLException;
+    Integer addCricketer(Cricketer cricketer)throws SQLException;
 
     List<Cricketer> getAllCricketersSortedByExperience()throws SQLException;
 

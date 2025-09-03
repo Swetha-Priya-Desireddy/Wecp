@@ -16,7 +16,7 @@ public class CricketerServiceImplJdbc implements CricketerService {
         return cricketerDAO.getAllCricketers();
     }
     @Override
-    public int addCricketer(Cricketer cricketer) throws SQLException
+    public Integer addCricketer(Cricketer cricketer) throws SQLException
     {
         return cricketerDAO.addCricketer(cricketer);
     }

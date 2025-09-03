@@ -14,7 +14,7 @@ public class CricketerServiceImplArraylist implements CricketerService {
     }
 
     @Override
-    public int addCricketer(Cricketer cricketer){
+    public Integer addCricketer(Cricketer cricketer){
         cricketerList.add(cricketer);
        return cricketerList.size();
     }

@@ -17,7 +17,7 @@ public class CricketerDAOImpl implements CricketerDAO {
       connection=DatabaseConnectionManager.getConnection();
     String sql="insert into cricketer(team_id,cricketer_name,age,nationality,experience,role,total_runs,total_wickets)values(?,?,?,?,?,?,?,?)";
     statement=connection.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
-    statement.setInt(1, cricketer.getTeamId());
+    statement.setInt(1, cricketer.getTeam().getTeamId());
     statement.setString(2, cricketer.getCricketerName());
     statement.setInt(3, cricketer.getAge());
     statement.setString(4, cricketer.getNationality());
@@ -103,7 +103,7 @@ public class CricketerDAOImpl implements CricketerDAO {
       connection=DatabaseConnectionManager.getConnection();
       String sql="update cricketer set team_id=?,cricketer_name=?,age=?,nationality=?,experience=?,role=?,total_runs=?,total_wickets=? where cricketer_id=?";
       statement =connection.prepareStatement(sql);
-      statement.setInt(1, cricketer.getTeamId());
+      statement.setInt(1, cricketer.getTeam().getTeamId());
       statement.setString(2, cricketer.getCricketerName());
       statement.setInt(3, cricketer.getAge());
       statement.setString(4, cricketer.getNationality());
