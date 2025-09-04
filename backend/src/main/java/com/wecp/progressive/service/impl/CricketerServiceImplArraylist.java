@@ -24,7 +24,7 @@ public class CricketerServiceImplArraylist implements CricketerService {
 
     @Override
     public List<Cricketer> getAllCricketersSortedByExperience() {
-        List<Cricketer> sortedCricketer= cricketerList;
+        List<Cricketer> sortedCricketer = cricketerList;
         sortedCricketer.sort(Comparator.comparing(Cricketer::getExperience));
         return sortedCricketer;
     }
