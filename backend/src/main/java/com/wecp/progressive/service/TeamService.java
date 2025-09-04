@@ -11,9 +11,9 @@ public interface TeamService {
 
     int addTeam(Team team) throws SQLException;
 
-    List<Team> getAllTeamsSortedByName()throws SQLException;
+    List<Team> getAllTeamsSortedByName() throws SQLException;
 
-    default void emptyArrayList() throws SQLException{
+    default void emptyArrayList()throws SQLException {
     }
 
     //Do not implement these methods in TeamServiceImplArrayList.java class
