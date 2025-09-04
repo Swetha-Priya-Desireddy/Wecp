@@ -1,47 +1,55 @@
 package com.wecp.progressive.service.impl;
+
 import java.sql.SQLException;
 import java.util.Comparator;
 import java.util.List;
+
 import com.wecp.progressive.dao.TeamDAO;
 import com.wecp.progressive.entity.Team;
 import com.wecp.progressive.service.TeamService;
 
 public class TeamServiceImplJdbc implements TeamService {
+
     private TeamDAO teamDAO;
-    
-     public TeamServiceImplJdbc(TeamDAO teamDAO) {
+
+    public TeamServiceImplJdbc(TeamDAO teamDAO) {
         this.teamDAO = teamDAO;
     }
-    public List<Team>getAllTeams()throws SQLException
-    {
-        return teamDAO.getAllTeams();
+
+    @Override
+    public List<Team> getAllTeams() throws SQLException{
+       return teamDAO.getAllTeams();
     }
-    public int addTeam(Team team)throws SQLException
-    {
+
+    @Override
+    public int addTeam(Team team) throws SQLException{
         return teamDAO.addTeam(team);
     }
-    public List<Team> getAllTeamsSortedByName()throws SQLException
-    {
-        List<Team> sortedTeams=teamDAO.getAllTeams();
-       if(!sortedTeams.isEmpty())
-       {
-        sortedTeams.sort(Comparator.comparing(Team::getTeamName));
-       }
-       
+
+    @Override
+    public List<Team> getAllTeamsSortedByName() throws SQLException{
+        List<Team> sortedTeams = teamDAO.getAllTeams();
+        if(!sortedTeams.isEmpty()){
+
+            sortedTeams.sort(Comparator.comparing(Team:: getTeamName));
+        }
         return sortedTeams;
     }
-    public Team getTeamById(int teamId)throws SQLException
-    {
+
+    @Override
+    public Team getTeamById(int teamId) throws SQLException{
         return teamDAO.getTeamById(teamId);
     }
-    public void updateTeam(Team team)throws SQLException
-    {
+
+    @Override
+    public void updateTeam(Team team) throws SQLException{
         teamDAO.updateTeam(team);
+
     }
-    public void deleteTeam(int teamId)throws SQLException
-    {
+
+    @Override
+    public void deleteTeam(int teamId)throws SQLException{
         teamDAO.deleteTeam(teamId);
     }
-    
 
 }
