@@ -1,9 +1,7 @@
-
 package com.wecp.progressive.controller;
 
 import com.wecp.progressive.entity.Match;
 import org.springframework.http.ResponseEntity;
-
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -13,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/matches")
@@ -25,7 +24,7 @@ public class MatchController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Match> getMatchById(@PathVariable int id) {
+    public ResponseEntity<Match> getMatchById(@PathVariable int matchId) {
         return ResponseEntity.ok(null);
     }
 
@@ -35,12 +34,12 @@ public class MatchController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateMatch(@PathVariable int id, @RequestBody Match match) {
+    public ResponseEntity<Void> updateMatch(@PathVariable int matchId, @RequestBody Match match) {
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMatch(@PathVariable int id) {
+    public ResponseEntity<Void> deleteMatch(@PathVariable int matchId) {
         return ResponseEntity.ok().build();
     }
 
