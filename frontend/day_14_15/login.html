@@ -1,10 +1,38 @@
-<!-- Create login form Username and Password fields in login form
-    where input fields has following cofigurations:
-     - username will have  loginUsername id 
-     - password field will have loginPassword id
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body class="bg-light">
 
-    validate: 
-    -loginUsername: should not be empty
-    -loginPassword: should not be empty
+  <div class="container mt-5">
+    <h2 class="text-center mb-4">IPL Progressive - Login</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow p-4">
+          <h4 class="mb-3">Login</h4>
+          <form id="loginForm">
+            <div class="mb-3">
+              <label for="loginUsername" class="form-label">Username</label>
+              <input type="text" id="loginUsername" class="form-control" placeholder="Enter username">
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" id="loginPassword" class="form-control" placeholder="Enter password">
+            </div>
+            <button type="button" class="btn btn-primary w-100" onclick="login()">Login</button>
+          </form>
+          <p class="mt-3 text-center">
+            Don’t have an account? <a href="registration.html">Register</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
--->
+  <script src="js/validation.js"></script>
+</body>
+</html>
