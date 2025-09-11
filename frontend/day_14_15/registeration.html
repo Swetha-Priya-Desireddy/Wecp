@@ -1,46 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Registration</title>
-  <link rel="stylesheet" href="css/bootstrap.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Registration</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body class="bg-light">
-
-  <div class="container mt-5">
-    <h2 class="text-center mb-4">IPL Progressive - Registration</h2>
-    
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card shadow p-4">
-          <h4 class="mb-3">Register</h4>
-          <form id="registerForm">
-            <div class="mb-3">
-              <label for="regName" class="form-label">Full Name</label>
-              <input type="text" id="regName" class="form-control" placeholder="Enter full name">
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="regUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="regPassword" required>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="register()">Register</button>
+                </form>
             </div>
-            <div class="mb-3">
-              <label for="regEmail" class="form-label">Email</label>
-              <input type="email" id="regEmail" class="form-control" placeholder="Enter email">
-            </div>
-            <div class="mb-3">
-              <label for="regUsername" class="form-label">Username</label>
-              <input type="text" id="regUsername" class="form-control" placeholder="Enter username">
-            </div>
-            <div class="mb-3">
-              <label for="regPassword" class="form-label">Password</label>
-              <input type="password" id="regPassword" class="form-control" placeholder="Enter password">
-            </div>
-            <button type="button" class="btn btn-success w-100" onclick="register()">Register</button>
-          </form>
-          <p class="mt-3 text-center">
-            Already have an account? <a href="login.html">Login</a>
-          </p>
         </div>
-      </div>
     </div>
-  </div>
-
-  <script src="js/validation.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 </html>
