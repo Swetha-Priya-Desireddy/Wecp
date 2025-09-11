@@ -1,59 +1,56 @@
-// LOGIN FUNCTION
 function login() {
-  const username = document.getElementById("loginUsername").value.trim();
-  const password = document.getElementById("loginPassword").value.trim();
 
-  if (username === "" || password === "") {
-    alert("All fields are mandatory for login!");
-    return;
-  }
+    var username = document.getElementById("loginUsername").value;
+    var password = document.getElementById("loginPassword").value;
 
-  console.log("Login Attempt:");
-  console.log("Username:", username);
-  console.log("Password:", password);
+    // You can perform login validation and authentication here
+    // For simplicity, let's just display an alert
 
-  alert("Login successful (demo)!");
+    console.log("Login clicked. Username: " + username + ", Password: " + password);
 }
 
-// REGISTRATION FUNCTION
+ 
 function register() {
-  const name = document.getElementById("regName").value.trim();
-  const email = document.getElementById("regEmail").value.trim();
-  const username = document.getElementById("regUsername").value.trim();
-  const password = document.getElementById("regPassword").value.trim();
 
-  // Mandatory fields
-  if (!name || !email || !username || !password) {
-    alert("All fields are mandatory!");
-    return;
-  }
 
-  // Email validation
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailPattern.test(email)) {
-    alert("Please enter a valid email address!");
-    return;
-  }
+    var name = document.getElementById("registerName").value;
+    var email = document.getElementById("registerEmail").value;
+    var username = document.getElementById("registerUsername").value;
+    var password = document.getElementById("registerPassword").value;
 
-  // Username validation
-  const usernamePattern = /^[a-zA-Z0-9]+$/;
-  if (!usernamePattern.test(username)) {
-    alert("Username should not contain special characters!");
-    return;
-  }
+    // Frontend validation for registration form
 
-  // Password validation
-  const passwordPattern = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
-  if (!passwordPattern.test(password)) {
-    alert("Password must be at least 8 characters, contain one uppercase letter, and one number!");
-    return;
-  }
 
-  console.log("Registration Details:");
-  console.log("Name:", name);
-  console.log("Email:", email);
-  console.log("Username:", username);
-  console.log("Password:", password);
+    if (name === "" || email === "" || username === "" || password === "") {
+        alert("All fields are mandatory. Please fill in all the details.");
+        return;
+    }
 
-  alert("Registration successful (demo)!");
+    // Validate email format
+
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Validate username (no special characters)
+
+
+    var usernameRegex = /^[a-zA-Z0-9]+$/;
+    if (!usernameRegex.test(username)) {
+        alert("Username should not contain special characters.");
+        return;
+    }
+
+    // Validate password (at least 8 characters, one capital letter, and one numeric)
+
+    var passwordRegex = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    if (!passwordRegex.test(password)) {
+        alert("Password should be at least 8 characters and must contain at least one capital letter and one numeric.");
+        return;
+    }
+
+    console.log("Register clicked. Name: " + name + ", Email: " + email + ", Username: " + username + ", Password: " + password);
 }
+module.exports = { login, register };
