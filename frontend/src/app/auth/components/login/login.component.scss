@@ -1,0 +1,137 @@
+/* auth-page.scss */
+
+/* Full-page gradient background */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fbc2eb 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card container */
+.auth-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  overflow: hidden;
+  padding: 30px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Header */
+.auth-header {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 20px 0;
+  background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: 15px 15px 0 0;
+}
+
+/* Form body */
+.auth-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Inputs and select */
+input,
+select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #4facfe;
+  box-shadow: 0 0 8px rgba(74, 172, 254, 0.5);
+  outline: none;
+}
+
+/* Submit buttons */
+.btn-submit,
+.btn-login {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+  color: #16712d;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover,
+.btn-login:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(41, 70, 121, 0.2);
+}
+
+/* Links */
+.auth-link {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.auth-link a {
+  color: #4facfe;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* Error / Success messages (these will still be dynamically populated) */
+.success {
+  color: #27ae60;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.error {
+  color: #e74c3c;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,120 @@
+/* register.component.scss */
+
+/* General container styling */
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Card header */
+.card-header {
+  background-color: #4a90e2;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Card body */
+.card-body {
+  padding: 30px;
+}
+
+/* Form group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs and select */
+input.form-control,
+select.form-control {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #9a3a50;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+input.form-control:focus,
+select.form-control:focus {
+  border-color: #14852d;
+  outline: none;
+  box-shadow: 0 0 5px rgba(74, 144, 226, 0.3);
+}
+
+/* Error messages */
+.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
+
+/* Success messages */
+.success {
+  color: #27ae60;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* Submit button */
+.btn-submit {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #291377;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #357abd;
+}
+
+/* Login link */
+a.task-list {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #4a90e2;
+  font-weight: 500;
+}
+
+a.task-list:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+}
